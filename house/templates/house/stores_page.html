@@ -1,0 +1,142 @@
+{% extends 'house/base.html' %}
+{% load static %}
+
+
+{% block style %}  
+<link rel="stylesheet" href="{% static 'css/stores.css' %}"> 
+{% endblock style %}
+    
+
+{% block title %} Store{% endblock title %}
+    
+{% block header %}
+ {% include 'house/webparts/navbar.html' %} 
+{% endblock header %}
+
+
+{% block main %} 
+<br>
+  <div class="row ">
+    <div class="col-md-10 offset-md-1">
+        <div class="card m-auto" style="max-width:850px">
+            <div class="card-body">
+                <form class="d-flex align-items-center"><i class="fas fa-search d-none d-sm-block h4 text-body m-0"></i>
+                  <input class="form-control form-control-lg flex-shrink-1 form-control-borderless" type="search" placeholder="Search designers or keywords" name="searchbar" />
+                  <button class="btn btn-primary btn-lg search-btn" type="submit">Search</button></form>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <!--NEW GRID IMAGE LAYOUT-->
+  <!-- <div class="row grid">
+    <div class="column">
+      <div class="image-container">
+      <a href="#"><img src="../static/images/woman.jpg" class="img-fluid"></a>
+      <p> by Mariam Abiodun</p>
+    </div>
+    <div class="image-container">
+      <a href="#"><img src="../static/images/man.jpg" class="img-fluid"></a>
+      <p> by Emma Davies</p>
+    </div>
+    <div class="image-container">
+      <a href="#"><img src="../static/images/alex.jpg" class="img-fluid"></a>
+      <p> by alexander's</p>
+    </div>    
+    <div class="image-container">
+      <a href="#"><img src="../static/images/manly.jpg" class="img-fluid"></a>
+      <p> by Peter wears</p>
+    </div>  
+    <div class="image-container">
+      <a href="#"><img src="../static/images/big.jpg" class="img-fluid"></a>
+      <p> by big boys</p>
+    </div>
+    </div>
+  
+    <div class="column">
+      <div class="image-container">
+        <a href="#"><img src="../static/images/sisters.jpg" class="img-fluid"></a>
+        <p> by Tolu styles</p>
+      </div>
+      <div class="image-container">
+        <a href="#"><img src="../static/images/piano.jpg" class="img-fluid"></a>
+        <p> by The Keys</p>
+      </div>
+      <div class="image-container">
+        <a href="#"><img src="../static/images/show.jpg" class="img-fluid"></a>
+        <p> by Jane snow</p>
+      </div>
+      <div class="image-container">
+        <a href="#"><img src="../static/images/murat.jpg" class="img-fluid"></a>
+        <p> by Murat Ekanem</p>
+      </div>
+      <div class="image-container">
+        <a href="#"><img src="../static/images/fold.jpg" class="img-fluid"></a>
+        <p> by Mk collections</p>
+      </div>
+      <div class="image-container">
+        <a href="#"><img src="../static/images/ank1.webp" class="img-fluid"></a>
+        <p> by Anike's</p>
+      </div>
+      </div>
+  
+    <div class="column">
+      <div class="image-container">
+        <a href="#"><img src="../static/images/real.jpg" class="img-fluid"></a>
+        <p> by Tunde casual</p>
+      </div>
+      <div class="image-container">
+        <a href="#"><img src="../static/images/tall.jpg" class="img-fluid"></a>
+        <p> by Tall Tayo</p>
+      </div>
+      <div class="image-container">
+        <a href="#"><img src="../static/images/leon.jpg" class="img-fluid"></a>
+        <p> by Leon p</p>
+      </div>
+      <div class="image-container">
+        <a href="#"><img src="../static/images/jenny.jpg" class="img-fluid"></a>
+        <p> by Jenny & doll</p>
+      </div>
+      </div>
+  
+    <div class="column">
+      <div class="image-container">
+        <a href="#"><img src="../static/images/sweet.jpg" class="img-fluid"></a>
+        <p> by Clothations</p>
+      </div>
+      <div class="image-container">
+        <a href="#"><img src="../static/images/asoebi.png" class="img-fluid"></a>
+        <p> by Wearing Me</p>
+      </div>
+      <div class="image-container">
+        <a href="#"><img src="../static/images/vasile.jpg" class="img-fluid"></a>
+        <p> by Yisa tailor</p>
+      </div>
+      <div class="image-container">
+        <a href="#"><img src="../static/images/prince.jpg" class="img-fluid"></a>
+        <p> by Prince Mohammed</p>
+      </div>
+      </div>
+  </div> -->
+  <!--the pagination-->
+  <nav aria-label="...">
+    <ul class="pagination justify-content-center mt-5">
+      <li class="page-item">
+        <a class="page-link text-dark" href="#">Previous</a>
+      </li>
+      <li class="page-item  active"><a class="page-link text-dark" href="#">1</a></li>
+      <li class="page-item"><a class="page-link text-dark" href="#"> 2</a></li>
+      <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link text-dark" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+ {% endblock main %}
+    
+  
+
+
+
+
+

@@ -1,0 +1,49 @@
+{% extends 'house/base.html' %}
+{% load static %}
+
+
+{% block style %}  
+<link rel="stylesheet" href="{% static 'css/about.css' %}"> 
+{% endblock style %}
+    
+
+{% block title %} Store{% endblock title %}
+    
+{% block header %}
+ {% include 'house/webparts/navbar.html' %} 
+{% endblock header %}
+
+
+{% block main %} 
+<div class="jumbotron jumbotron-fluid ">
+    <div class="container">
+        <h1 class="display-3 top">Fashion House</h1>
+        <p class="lead">About us</p>
+        <hr class="my-2">
+        <p class="explain">
+           <span style="color: crimson; font-weight: 700; font-size: 40px;">F</span>ashion House is
+            a place for fashion designers to showcase their designs , it is a place for people
+            to find the right fashion designers to design their clothes for them , so maybe
+            you are a work from home fashion designer who has a machine but doesn't have a shop , 
+            Fashion house is your shop,it is a place where
+           fashion designers/tailors are connected to people who are intrested in finding the right fashion designer
+           for their products, it is also a place where investors meet good fashion designers to partner with them,
+           hire them or run contracts with them.
+           Fashion house is a place where we do everything about designing clothes , we are so intrested in the 
+           run way that we help fashion designers showcase their talents, design, skills and potentials so
+           people who are looking for a fashion designer can get the best of them. <br><br>
+            In fashion House , people who are looking for a good fashion designer would connect with the tailors and
+           fashion designers here to make and deliver their clothes to them at home without any stress
+           it is a place where your design meets the market.
+           Fashion House is a free website for everyone to post their designs and attract potential clients.
+        </p>
+    </div>
+</div>
+ {% endblock main %}
+    
+  
+
+
+
+
+

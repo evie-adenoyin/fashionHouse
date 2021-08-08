@@ -1,0 +1,215 @@
+{% extends 'house/base.html' %}
+{% load static %}
+
+
+{% block style %}  <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endblock style %}
+    
+
+{% block title %} Home{% endblock title %}
+    
+{% block header %}
+<header>
+  <header>
+    <nav class="navbar navbar-light navbar-expand-md">
+      <div class="container-fluid"><a class="navbar-brand text-light" href="#">Fashion House</a>
+        <!--the toggler for the full screen navigation menu-->
+          <span><img src="{% static 'images/item.png' %}" class="menu" onclick="openNav()"> </span>
+        
+          <div class="collapse navbar-collapse" id="navcol-1">
+              <ul class="nav navbar-nav mr-auto">
+                  <li role="presentation" class="nav-item"><a class="nav-link active text-light " href="{% url 'house:homeView' %}">Home</a></li>
+                  <li role="presentation" class="nav-item"><a class="nav-link text-light" href="{% url 'house:storeView' %}">Store</a></li>
+                  <li role="presentation" class="nav-item"><a class="nav-link text-light" href="{% url 'house:aboutView' %}">About</a></li>
+                  <li role="presentation" class="nav-item"><a class="nav-link text-light" href="{% url 'house:contactFormView' %}">Contact</a></li>
+                  <li role="presentation" class="nav-item"><a class="nav-link text-light" href="login.html">Login</a></li>
+                  <li role="presentation" class="nav-item"><a class="nav-link text-light" href="register.html">Register</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <!--navigation menu for mobile devices-->
+      {% include 'house/webparts/mobile_navbar.html' %}
+  </nav>
+  <!--page intro-->
+  <div class="intro">
+    <h2>LET THE WORLD SEE YOUR DESIGN</h2>
+    <p>Local tailors post their designs here to attract customers online</p>
+    <a href="about.html">
+  <button type="button" class="btn btn-default learn">Learn more</button>
+  </a>
+  </div>
+  </header>
+ 
+</header> 
+{% endblock header %}
+
+
+{% block main %} 
+<h3 class="text-center mt-4 mb-4">Trends</h3>
+<!--THE NEW TESTING OF IMAGE GRID FOR MAKING IMAGES LOOK GREAT-->
+<div class="row grid">
+  <div class="column">
+    
+    {% for posts in posts  %}
+    <div class="image-container">
+      <a href="#"><img src="{{posts.photo.url}}" class="img-fluid"></a>
+      <p> by {{posts.vendor.user.username}}</p>
+    </div>
+    {% endfor %}
+      
+<!--   
+  <div class="image-container">
+    <a href="#"><img src="../static/images/man.jpg" class="img-fluid"></a>
+    <p> by Emma Davies</p>
+  </div>
+  <div class="image-container">
+    <a href="#"><img src="../static/images/alex.jpg" class="img-fluid"></a>
+    <p> by alexander's</p>
+  </div>    
+  <div class="image-container">
+    <a href="#"><img src="../static/images/manly.jpg" class="img-fluid"></a>
+    <p> by Peter wears</p>
+  </div>  
+  <div class="image-container">
+    <a href="#"><img src="../static/images/big.jpg" class="img-fluid"></a>
+    <p> by big boys</p>
+  </div>
+  </div>
+  <div class="column">
+    <div class="image-container">
+      <a href="#"><img src="../static/images/sisters.jpg" class="img-fluid"></a>
+      <p> by Tolu styles</p>
+    </div>
+    <div class="image-container">
+      <a href="#"><img src="../static/images/piano.jpg" class="img-fluid"></a>
+      <p> by The Keys</p>
+    </div>
+    <div class="image-container">
+      <a href="#"><img src="../static/images/show.jpg" class="img-fluid"></a>
+      <p> by Jane snow</p>
+    </div>
+    <div class="image-container">
+      <a href="#"><img src="../static/images/murat.jpg" class="img-fluid"></a>
+      <p> by Murat Ekanem</p>
+    </div>
+    <div class="image-container">
+      <a href="#"><img src="../static/images/fold.jpg" class="img-fluid"></a>
+      <p> by Mk collections</p>
+    </div>
+    <div class="image-container">
+      <a href="#"><img src="../static/images/ank1.webp" class="img-fluid"></a>
+      <p> by Anike's</p>
+    </div>
+    </div>
+  <div class="column">
+    <div class="image-container">
+      <a href="#"><img src="../static/images/real.jpg" class="img-fluid"></a>
+      <p> by Tunde casual</p>
+    </div>
+    <div class="image-container">
+      <a href="#"><img src="../static/images/tall.jpg" class="img-fluid"></a>
+      <p> by Tall Tayo</p>
+    </div>
+    <div class="image-container">
+      <a href="#"><img src="../static/images/leon.jpg" class="img-fluid"></a>
+      <p> by Leon p</p>
+    </div>
+    <div class="image-container">
+      <a href="#"><img src="../static/images/jenny.jpg" class="img-fluid"></a>
+      <p> by Jenny & doll</p>
+    </div>
+    </div>
+  <div class="column">
+    <div class="image-container">
+      <a href="#"><img src="../static/images/sweet.jpg" class="img-fluid"></a>
+      <p> by Clothations</p>
+    </div>
+    <div class="image-container">
+      <a href="#"><img src="../static/images/asoebi.png" class="img-fluid"></a>
+      <p> by Wearing Me</p>
+    </div>
+    <div class="image-container">
+      <a href="#"><img src="../static/images/vasile.jpg" class="img-fluid"></a>
+      <p> by Yisa tailor</p>
+    </div>
+    <div class="image-container">
+      <a href="#"><img src="../static/images/prince.jpg" class="img-fluid"></a>
+      <p> by Prince Mohammed</p>
+    </div>-->
+    </div>
+</div>  
+<!--go to store button
+<div class="text-center mt-5">
+  <a href="stores.html"><button type="button" class="btn btn-default see-more-button"> See More</button></a>
+</div>
+
+
+
+<!--END OF TEST, YOU CAN NOW DELETE IF NOT NEEDED-->
+  <div class="highlight-wing pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="intro">
+                    <h2 style="color: crimson;" class="pt-5">Are You A Fashion Designer ?</h2>
+                    <p style="color: black">Post your designs on fashion House for free, get customers
+                      to patronise you <br>
+                  send your design to Our whatsapp group along with your name and phone number <br>
+                and let customers see your design </p>
+                    <a class="btn btn-default learn text-center" role="button" href="contact.html">Send Now</a>
+                  </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="d-none d-sm-block wing"><img class="device img-fluid" src="{% static 'images/wings.png' %}" />
+                    <div class="screen"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!--testimonial section-->
+ <div class="testimonials-clean">
+  <div class="container">
+      <div class="intro">
+          <h2 class="text-center text-dark">Testimonials </h2>
+          <p class="text-center">Our customers and tailors love us! Read what they have to say below</p>
+      </div>
+      <div class="row people">
+          <div class="col-md-6 col-lg-4 item">
+              <div class="box">
+                  <p class="description">I am a fan of this website, i come here whenever i want to look
+                    for a good fashion designer</p>
+              </div>
+              <div class="author"><img class="rounded-circle" src="../static/images/test1.jpg" />
+                  <h5 class="name">Mary Johnson</h5>
+                  <p class="title">CEO of greene's Inc</p>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4 item">
+              <div class="box">
+                  <p class="description">I have been a tailor and since i started posting my designs
+                    here, customers have been contacting me all the time
+                  </p>
+              </div>
+              <div class="author"><img class="rounded-circle" src="../static/images/test2.jpg" />
+                  <h5 class="name">kemi Davids</h5>
+                  <p class="title">Founder of Kemi styles.</p>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-4 item">
+              <div class="box">
+                  <p class="description">I have been looking for money to get a shop for some time now, 
+                    but since i started posting my clothes here, i haven't been able to meet up to all the customers demands
+                  </p>
+              </div>
+              <div class="author"><img class="rounded-circle" src="../static/images/test1.jpg" />
+                  <h5 class="name">Emily Clark</h5>
+                  <p class="title">Owner of Creative Ltd.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+ {% endblock main %}
+    
+  
