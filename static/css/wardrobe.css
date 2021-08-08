@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Dosis", sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #f1f7fc;
+}
+.navbar ul li a {
+  margin-left: 30px;
+}
+/*styling for overlay nav*/
+.overlay {
+  visibility: collapse;
+}
+.navbar ul li a {
+  font-size: 20px;
+}
+.menu {
+  width: 20px;
+  cursor: pointer;
+  visibility: collapse;
+}
+
+/*media query for smaller screen*/
+
+@media screen and (max-width: 767px) {
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    visibility: visible;
+  }
+  .menu {
+    visibility: visible;
+  }
+
+  .overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #f1f1f1;
+  }
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+}
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* the main styling*/
+
+.container .dp {
+  width: 300px;
+  height: 300px;
+}
+.image-column {
+  padding-right: 10px;
+}
+.profile-title .name {
+  font-weight: 800;
+  font-size: 25px;
+  padding-right: 15px;
+}
+.fa-map-marker-alt {
+  color: #818181;
+}
+.profile-title .work {
+  color: crimson;
+}
+.checked {
+  color: crimson;
+}
+.ratings .rating-name {
+  color: #818181;
+  font-size: 13px;
+}
+.rate-number {
+  font-weight: 600;
+  padding-right: 10px;
+}
+.contact .whatsapp {
+  color: green;
+  font-weight: 800;
+}
+.contact .phone {
+  color: black;
+  font-weight: 800;
+}
+.info{
+  margin-top: 20px;
+}
+.wardrobe-text{
+  font-weight: 800;
+  color: crimson;
+}
+/*styling for image grids*/
+/*THE NEW GALLERY FOR TESTING THE IMAGES FOR NEW WAYS OF ARRANGING THEM*/
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.image-container {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+/*media queries for main*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .profile-title , .contact {
+    padding-left: 20px;
+  }
+  .info{
+    padding-left: 20px;
+  }
+
+}
+@media screen and (min-width: 575px) and (max-width: 767px) {
+  .container{
+    margin-top: 15px;
+  }
+  .profile-title, .contact{
+    padding-left: 20px;
+  }
+  .info{
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .container {
+    margin-top: 10px;
+  }
+  .container .dp {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .profile-title {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+  .profile-title .name {
+    font-size: 20px;
+  }
+  .ratings {
+    display: flex;
+    justify-content: center;
+  }
+  .ratings .rating-name {
+    padding-right: 10px;
+  }
+  .ratings .rate-number {
+    padding-right: 5px;
+  }
+  .contact {
+    display: flex;
+    justify-content: center;
+  }
+  .contact .whatsapp {
+    font-size: 14px;
+  }
+  .contact .phone {
+    font-size: 14px;
+  }
+}
+
+/*footer styling*/
+footer .end {
+  color: white;
+}
+footer .end ul li {
+  list-style: none;
+}
+footer .end ul li a {
+  text-decoration: none;
+}
+footer {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.footer-dark .item.social > a {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+  margin: 0 8px;
+  color: #fff;
+  opacity: 0.75;
+}
+.footer-dark .copyright {
+  text-align: center;
+  padding-top: 24px;
+  opacity: 0.3;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.footer-dark ul li a {
+  color: white;
+}

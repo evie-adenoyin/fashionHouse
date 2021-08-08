@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  font-family: 'Dosis';
+}
+.logo{
+  width: 50px;
+  height: 50px;
+  margin-top: 25px;
+}
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: rgb(207, 19, 57);
+  position: fixed;
+  height: 800px;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 40px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Do Hyeon', sans-serif;
+}
+.sidebar .list{
+  margin-top: 50px;
+}
+ 
+.sidebar a.active {
+  background-color: rgb(255, 23, 70);
+  color: white;
+  border-radius: 8px;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.158);
+  color: white;
+  transition: 1s;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 800px;
+  background: rgba(128, 128, 128, 0.089);
+
+}
+.sidebar h3{
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+}
+.dashboard-icon{
+  padding-right: 3px;
+}
+.create-icon{
+  padding-right: 5px;
+}
+.product-icon{
+  padding-right: 4px;
+}
+/*end of navbar styling*/
+
+
+.row .card{
+  border: none;
+}
+.greet{
+  background: rgba(220, 20, 60, 0.096);
+}
+.greet-text{
+  font-weight: 800;
+  color: crimson;
+}
+.cartoon-tailor{
+  width: 160px;
+  height: 140px;
+}
+.around{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.number{
+  color: green;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 0;
+}
+.username{
+  font-weight: 800;
+}
+.mob-edit{
+  display: none;
+}
+.card-info{
+  display: flex;
+}
+.card-info img{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left: 60%;
+  border-radius: 5px;
+}
+.machine-icon{
+  background-color: rgb(255, 208, 205);
+  padding: 5px;
+}
+.briefcase-icon{
+  background-color: rgb(241, 205, 255);
+  padding: 5px;
+}
+.star-icon{
+  background-color: lemonchiffon;
+  padding: 5px;
+}
+.save-button{
+  background: crimson;
+  color: white;
+  width: 90px;
+  height: 35px;
+}
+
+.extra-buttons{
+  display: block;
+  margin-top: 20px;
+}
+
+.extra-buttons .btn{
+  background: crimson;
+  color: white;
+  width: 100px;
+  height: 40px;
+  border-radius: 0%;
+  margin-bottom: 20px;
+}
+.extra-buttons .btn:hover{
+  background-color: rgb(168, 14, 45);
+  transition: 1s;
+}
+/*all media queries*/
+@media screen and (max-width: 767px) {
+    .edit{
+      display: none;
+    }
+    .mob-edit{
+      display: flex;
+      margin: 2px;
+      padding-top: 15px;
+      width: 100%;
+    }
+
+}
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  div.content {
+    margin-left: 0;
+    height: 100%;
+  }
+  .box1 ,.box2{
+    margin-bottom: 10px;
+  }
+}
+
+
+/*@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+
+}
