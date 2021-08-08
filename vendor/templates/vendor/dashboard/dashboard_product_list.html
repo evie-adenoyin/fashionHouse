@@ -1,0 +1,102 @@
+{% extends 'vendor/dashboard/dashboard_base.html' %}
+
+{% load static %}
+
+
+{% block style %} <link rel="stylesheet" href="{% static 'css/dashboard-product.css' %}">{% endblock style %}
+{% block title %}Products{% endblock title %}
+{% block content %}
+<div class="content">
+    <h3 class="list-head" >DESIGN LIST</h3>
+    <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Design</th>
+            <th scope="col">Date</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>57849</td>
+            <td>01/01/2022</td>
+            <td>
+                <a href="#" class="edit-button" title="Edit" data-toggle="tooltip"><i class="fa fa-pencil" data-toggle="modal" data-target="#exampleModal"></i></a>
+            </td>         
+         </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>75847</td>
+            <td>02/03/2019</td>
+            <td>
+                <a href="#" class="edit-button" title="Edit" data-toggle="tooltip"><i class="fa fa-pencil" data-toggle="modal" data-target="#exampleModal"></i></a>
+            </td>           
+        </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>32980</td>
+            <td>12/06/2021</td>
+            <td>
+                <a href="#" class="edit-button" title="Edit" data-toggle="tooltip"><i class="fa fa-pencil" data-toggle="modal" data-target="#exampleModal"></i></a>
+            </td>          
+         </tr>
+        </tbody>
+      </table>
+
+</div>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Design</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <div class="cont">
+                            <div class="browse">
+                                CLICK HERE TO UPLOAD IMAGE
+                            </div>
+                        </div>
+                        <output id="list"></output><input id="files" multiple name="files[]" type="file" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>Design Name</label><input class="form-control" type="text" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label>Design Description</label><input class="form-control" type="text" />
+                    </div>
+                </div>
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger">Delete</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
+    

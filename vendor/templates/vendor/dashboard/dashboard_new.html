@@ -1,0 +1,44 @@
+{% extends 'vendor/dashboard/dashboard_base.html' %}
+
+{% load static %}
+
+
+{% block style %} <link rel="stylesheet" href="{% static 'css/dashboard-new.css' %}">{% endblock style %}
+{% block title %}New{% endblock title %}
+{% block content %}
+<div class="content">
+    <div class="main">
+        <h3 class="upload text-center">Upload Product</h3>
+       <!--drag and drop upload file-->
+       <div class="dashed_upload text-center">
+        <div class="wrapper">
+            <div class="drop">
+                <div class="cont">
+                    <div class="browse">
+                        CLICK HERE TO UPLOAD IMAGE
+                    </div>
+                </div>
+                <output id="list"></output><input id="files" multiple name="files[]" type="file" />
+            </div>
+        </div>
+    </div>
+    <br>
+    <!--input form-->
+    <form>
+        <div class="form-row">
+            <div class="col-sm-12">
+                <div class="form-group"><label>Design Name</label>{{form.name}}</div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-sm-12">
+                <div class="form-group "><label>Design Description</label><br>{{form.Design_Description}}</div>
+            </div>
+        </div>
+    </form>
+    <div class="text-center">   
+    <button type="submit" class="btn btn-default submit">Upload</button>
+    </div>
+        </div>
+</div>
+{% endblock content %}

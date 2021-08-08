@@ -1,0 +1,9 @@
+{% load static %}
+<div class="sidebar">
+    <div class="text-center"><img src="{% static 'images/flogo.png' %}" alt="" class="img-fluid logo"></div>
+    <div class="list">
+    <a class="active dashboard" href="{% url 'vendor:dashboardPreviewView' %}"><i class="fa fa-home dashboard-icon"></i>Dashboard</a>
+    <a class="create" href="{% url 'vendor:dashboardNewView' %}"><i class="fa fa-plus create-icon"></i>New</a>
+    <a class="product" href="{% url 'vendor:dashboardProductListView' %}"><i class="fas fa-image product-icon"></i>Product</a>
+  </div>
+  </div>

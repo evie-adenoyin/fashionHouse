@@ -1,0 +1,169 @@
+{% extends 'vendor/dashboard/dashboard_base.html' %}
+
+{% load static %}
+
+
+{% block style %} <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">{% endblock style %}
+{% block title %}Dashboard{% endblock title %}
+{% block content %}
+<div class="content">
+    <div class="bar mt-4">
+      <h3 class="text-overview">Overview</h3>
+    </div>
+  
+    <div class="items">
+  
+      <div class="row">
+        <div class="col-md-9">
+  
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card border-default box1">
+                <div class="card-body">
+                  <p class="card-title">Total Designs</p>
+                  <div class="card-info">
+                    <h4 class="card-text">350</h4>
+                    <img src="{% static 'images/sewing-machine.png' %}" alt="" class="img-fluid machine-icon">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-default box2">
+                <div class="card-body">
+                  <p class="card-title">Contracts</p>
+                  <div class="card-info">
+                    <h4 class="card-text">350</h4>
+                    <img src="{% static 'images/briefcase.png' %}" alt="" class="img-fluid briefcase-icon">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-default box3">
+                <div class="card-body">
+                  <p class="card-title">User rank</p>
+                  <div class="card-info">
+                    <h4 class="card-text">350</h4>
+                    <img src="{% static 'images/star.png' %}" alt="" class="img-fluid star-icon">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="row mt-4">
+            <div class="col-md-12">
+              <div class="card greet">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <h4 class="greet-text">GOOD MORNING STELLA MARCUS</h4>
+                      <p>How are you feeling today</p>
+                      <p>Grab a cup of coffee and get on your sewing machine <br>
+                      The world is waiting to buy your design</p>
+                    </div>
+                    <div class="col-md-4">
+                      <img src="{% static 'images/cartoon-tailor.png' %}" alt="" class="img-fluid cartoon-tailor">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row edit mt-4">
+            <div class="col-sm-12">
+              <h4>Edit profile</h4>
+              <hr>
+              <form>
+                <div class="form-row">
+                    <div class="col-sm-4">
+                        <div class="form-group"><label for="">Fullname</label>{{form.full_name}}</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group"><label for="">Brand Name</label>{{form.brand_name}}</div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group"><label for="">Phone</label>{{form.phone}}</div>
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-sm-4">
+                        <div class="form-group"><label for="">WhatsApp</label>{{form.whatsapp}}</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group"><label for="">Location</label>{{form.location}}</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group"><label>Profile Picture</label>
+                          <input type="file" id="myFile" name="filename">
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-default save-button text-center">Update</button>
+            </form>
+              
+            </div>
+          </div>
+        </div>
+        <!--the sidebar-->
+        <div class="col-md-3">
+          <div class="card border-primary">
+            <div class="card-body">
+              <div class="text-center"><img src="{% static 'images/test2.jpg' %}" alt="" class="img-fluid around"></div>
+              <div class="username text-center">Stella Marcus</div>
+              <div class="text-center number">08100349932</div>
+              <div class="text-center country">Lagos, Ng</div>
+          
+            </div>
+            <div class="extra-buttons text-center ">
+              <a href="{% url 'house:homeView' %}"><button type="button" class="btn btn-default"> Home</button></a>
+              <a href="#"><button type="button" class="btn btn-default">Logout</button></a>
+            </div>
+          </div>
+          
+        </div>
+        <!--PROFILE EDIT FOR MOBILE DEVICES-->
+        <div class="row mob-edit mt-4">
+          <div class="col-sm-12">
+            <h4>Edit profile</h4>
+            <hr>
+            <form>
+              <div class="form-row">
+                  <div class="col-sm">
+                      <div class="form-group"><label for="">Fullname</label> {{form.full_name}}</div>
+                  </div>
+                  <div class="col-sm">
+                      <div class="form-group"><label for="">Brand Name</label>{{form.brand_name}}</div>
+                  </div>
+                  <div class="col-sm">
+                    <div class="form-group"><label for="">Phone</label>{{form.phone}}</div>
+                </div>
+              </div>
+              <div class="form-row">
+                  <div class="col-sm">
+                      <div class="form-group"><label for="">WhatsApp</label>{{form.whatsapp}}</div>
+                  </div>
+                  <div class="col-sm">
+                      <div class="form-group"><label for="">Location</label>{{form.location}}</div>
+                  </div>
+                  <div class="col-sm">
+                      <div class="form-group"><label>Profile Picture</label>
+                        <input type="file" id="myFile" name="filename">
+                      </div>
+                  </div>
+              </div>
+              <button type="button" class="btn btn-default save-button text-center">Save</button>
+          </form>
+            
+          </div>
+        </div>
+        </div>
+        
+      </div>
+  
+  
+  </div>
+{% endblock content %}
+    

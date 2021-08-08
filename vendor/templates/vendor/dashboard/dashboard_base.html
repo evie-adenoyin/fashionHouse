@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Work+Sans&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Domine&display=swap" rel="stylesheet">     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% block style %} {% endblock style %}
+    <title>FashionHouse | {% block title %}{% endblock title %} </title> 
+   
+  </head>
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/css/dashboard.css">
+</head>
+<body>
+
+
+{% include 'vendor/webparts/sidebar.html' %}
+
+{% block content %}{% endblock content %}
+    
+{% include 'house/webparts/scripts.html' %}
+  
+  </body>
+</html>
